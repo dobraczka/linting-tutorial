@@ -2,11 +2,11 @@ import os
 
 from nox import session
 
-LEVEL_1_RULES = {"E", "F"}
+LEVEL_1_RULES = {"E", "F", "N"}
 LEVEL_2_RULES = LEVEL_1_RULES.union({"B"})
 LEVEL_3_RULES = LEVEL_2_RULES.union({"RET"})
 LEVEL_4_RULES = LEVEL_3_RULES.union({"SIM"})
-LEVEL_5_RULES = LEVEL_4_RULES.union({"A","UP"})
+LEVEL_5_RULES = LEVEL_4_RULES.union({"A", "UP"})
 LEVEL_6_RULES = LEVEL_5_RULES.union({"PLR"})
 
 LEVEL_RULES = {
@@ -49,10 +49,11 @@ def check(session):
         os.path.join("ltut", level, "example.py"),
     )
 
+
 @session
 def check_subsequent(session):
     session.install(".")
-    for level in range(1,6):
+    for level in range(1, 6):
         lev_string = f"level_{level}"
         lev_plus_string = f"level_{level+1}"
         rules = ",".join(LEVEL_RULES[lev_string])
