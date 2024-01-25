@@ -7,7 +7,7 @@ class Animal():
     volumes: Set[int] = {0,1,2}
 
     @abstractmethod
-    def regulate_voice(self, volume: int) -> str:
+    def regulateVoice(self, volume: int) -> str:
         pass
 
     def use_voice(self, volume: int):
@@ -19,7 +19,7 @@ class Cat(Animal):
 
     voice: str = "Meow Meow"
 
-    def regulate_voice(self, volume: int) -> str:
+    def regulateVoice(self, volume: int) -> str:
         volume
         if volume == 0:
             return "purrrrr"
@@ -35,7 +35,7 @@ class Dog(Animal):
     voice: str = "Bark Woof"
     volumes: Set[int] = {1,2,3,4,4}
 
-    def regulate_voice(self, volume: int) -> str:
+    def regulateVoice(self, volume: int) -> str:
         if volume == 1:
             return self.voice.lower()
         elif volume == 2:
