@@ -7,11 +7,11 @@ In this tutorial we will use [ruff](https://docs.astral.sh/ruff/tutorial/)
 
 ## Prerequisites
 
-You will only need your favorite way to edit python code, a command line and [nox](https://nox.thea.codes/en/stable/tutorial.html).
-My recommended way to install nox is via [pipx](https://packaging.python.org/en/latest/guides/installing-stand-alone-command-line-tools/), because it is a stand-alone command line tool:
+You will only need your favorite way to edit python code, a command line and [ruff](https://docs.astral.sh/ruff/installation/).
+My recommended way to install ruff is via [pipx](https://packaging.python.org/en/latest/guides/installing-stand-alone-command-line-tools/), because it is a stand-alone command line tool:
 
 ```
-pipx install nox
+pipx install ruff
 ```
 
 Pipx creates a virtual environment for each package to avoid dependency issues among your python standalone applications.
