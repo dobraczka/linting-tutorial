@@ -1,3 +1,4 @@
+import random
 from abc import abstractmethod
 
 
@@ -30,7 +31,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     voice: str = "Bark Woof"
-    volumes: set[int] = {0, 1, 2, 4}
+    volumes: set[int] = {0, 1, 2, 3, 4}
 
     def regulate_voice(self, volume: int) -> str:
         if volume == 0:
@@ -43,6 +44,8 @@ class Dog(Animal):
             return self.voice.upper()
         return "GRRR!!! WOOF!!"
 
+def check_no_dogs(zoo: list[Animal]):
+    return all(not isinstance(animal, Dog) for animal in zoo)
 
 if __name__ == "__main__":
     print("Let's hear some animal sounds!")
@@ -52,3 +55,8 @@ if __name__ == "__main__":
     my_cat = Cat()
     for vol in my_cat.volumes:
         my_cat.use_voice(vol)
+
+    tiny_zoo = [my_cat, my_dog]
+    random_zoo = random.choices(tiny_zoo, k=5)
+    has_no_dogs = check_no_dogs(random_zoo)
+    print(has_no_dogs)

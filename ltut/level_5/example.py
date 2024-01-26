@@ -1,10 +1,10 @@
 from abc import abstractmethod
-from typing import Set
+import random
 
 
 class Animal:
     voice: str
-    volumes: Set[int] = {0, 1, 2}
+    volumes: set[int] = {0, 1, 2}
 
     @abstractmethod
     def regulate_voice(self, volume: int) -> str:
@@ -31,7 +31,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     voice: str = "Bark Woof"
-    volumes: Set[int] = {0, 1, 2, 4}
+    volumes: set[int] = {0, 1, 2, 3, 4}
 
     def regulate_voice(self, volume: int) -> str:
         if volume == 0:
@@ -44,6 +44,11 @@ class Dog(Animal):
             return self.voice.upper()
         return "GRRR!!! WOOF!!"
 
+def check_no_dogs(zoo: list[Animal]):
+    for animal in zoo:
+        if isinstance(animal, Dog):
+            return False
+    return True
 
 if __name__ == "__main__":
     print("Let's hear some animal sounds!")
@@ -51,7 +56,10 @@ if __name__ == "__main__":
     my_dog.use_voice(2)
 
     my_cat = Cat()
-    for range in my_cat.volumes:
-        my_cat.use_voice(range)
-        my_cat.use_voice(range)
-        my_cat.use_voice("loud")
+    for vol in my_cat.volumes:
+        my_cat.use_voice(vol)
+
+    tiny_zoo = [my_cat, my_dog]
+    random_zoo = random.choices(tiny_zoo, k=5)
+    has_no_dogs = check_no_dogs(random_zoo)
+    print(has_no_dogs)

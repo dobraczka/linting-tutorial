@@ -56,5 +56,3 @@ if __name__ == "__main__":
     my_cat = Cat()
     for range in my_cat.volumes:
         my_cat.use_voice(range)
-        my_cat.use_voice(range)
-        my_cat.use_voice("loud")

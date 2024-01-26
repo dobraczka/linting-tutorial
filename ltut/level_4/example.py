@@ -31,7 +31,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     voice: str = "Bark Woof"
-    volumes: Set[int] = {0, 1, 2, 4}
+    volumes: Set[int] = {0, 1, 2, 3, 4}
 
     def regulate_voice(self, volume: int) -> str:
         if volume == 0:
@@ -53,5 +53,3 @@ if __name__ == "__main__":
     my_cat = Cat()
     for range in my_cat.volumes:
         my_cat.use_voice(range)
-        my_cat.use_voice(range)
-        my_cat.use_voice("loud")
