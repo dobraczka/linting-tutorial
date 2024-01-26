@@ -8,7 +8,7 @@ In the following the tutorial assumes you are inside the level's folder (in this
 
 Ruff has two commands you will use in this tutorial: `ruff format` and `ruff check`.
 Open `ltut/level_1/example.py` in your favourite IDE/text editor.
-Maybe you will already notice a bunch of issues with this little example.
+Maybe you will already notice a bunch of issues with this little example (or your IDE will complain).
 If not, don't worry, this is what this tutorial wants to teach you!
 
 Let's run the first command:
@@ -86,3 +86,4 @@ If you fixed the error(s) save the file and run
 ruff check --select F,E,N example.py
 ```
 again. Now there should be no errors. Congratulations! You finished the first level!
+You can now move on to `ltut/level_2`.
