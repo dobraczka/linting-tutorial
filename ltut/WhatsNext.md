@@ -18,11 +18,16 @@ I think type hints are tremendously helpful to keep track of what you are doing 
 Nowadays there are several type checkers around for python.
 The most commonly used is [mypy](https://www.mypy-lang.org/) and they make a great case for static typing:
 
-> *Compile-time type checking*
->   Static typing makes it easier to find bugs with less debugging. 
-> *Easier maintenance*
->   Type declarations act as machine-checked documentation. Static typing makes your code easier to understand and easier to modify without introducing bugs. 
-> *Grow your programs from dynamic to static typing*
+> **Compile-time type checking**
+> 
+>   Static typing makes it easier to find bugs with less debugging.
+> 
+> **Easier maintenance**
+> 
+>   Type declarations act as machine-checked documentation. Static typing makes your code easier to understand and easier to modify without introducing bugs.
+> 
+> **Grow your programs from dynamic to static typing**
+> 
 >   You can develop programs with dynamic typing and add static typing after your code has matured, or migrate existing Python code to static typing. 
 
 There have been some [other contenders](https://www.infoworld.com/article/3575079/4-python-type-checkers-to-keep-your-code-clean.html) in the realm of type-checkers.
@@ -30,16 +35,44 @@ There have been some [other contenders](https://www.infoworld.com/article/357507
 ## Orchestration tools
 
 Running linters, type checkers, tests and so on can be a cumbersome process. In order to simplify this you can use tools like [tox](https://tox.wiki/en/4.12.1/user_guide.html) or [nox](https://nox.thea.codes/en/stable/).
-These tools can be used to installed dependencies for specific tasks in isolated environments and run scripts for different python versions.
+These tools can be used to install dependencies for specific tasks in isolated environments and run scripts for different python versions.
 I prefer nox, because [it is more versatile](https://tox.wiki/en/4.12.1/index.html#useful-links) and I find the configuration slightly simpler.
+I use this tool (among other things) to build docs, run ruff and mypy and to execute tests.
 
 ## Pre-commit hooks
 
-Similar to avoiding rule violations by adding ruff to your IDE you can avoid to commiting any unwanted issues.
+Similar to avoiding rule violations by adding ruff to your IDE you can avoid to *commit* such issues.
 This is where [pre-commit](https://pre-commit.com/) hooks come in. You can configure specific steps that run before your changes are committed.
 You can for example run [ruff](https://docs.astral.sh/ruff/integrations/#pre-commit).
 Other useful hooks include checking if you added large files or if any of your files contain merge-conflict strings.
 An overview of the hooks can be found [here](https://pre-commit.com/hooks.html).
+For reference, this is what is currently in my default pre-commit configuration:
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: "1.3.0"
+    hooks:
+      - id: pyproject-fmt
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.3
+    hooks:
+      - id: ruff
+        args: ["--fix", "--show-fixes"]
+      - id: ruff-format
+```
 
 ## That is a lot of stuff to set up each time...
 
