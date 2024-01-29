@@ -82,3 +82,9 @@ This is where [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/READM
 You can create templates from which you can initialise new projects. There are [a lot](https://github.com/audreyfeldroy/cookiecutter-pypackage) of templates out there.
 And of course you can always adapt existing ones to your needs (for example as [I did](https://github.com/audreyfeldroy/cookiecutter-pypackage)).
 If you create a lot of projects this way and change the template often you can use [cruft](https://cruft.github.io/cruft/) to keep the changes synched across projects.
+
+## Further reading
+
+- [Hypermodern Python](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)
+- [Code Styles aren't black and white](https://www.youtube.com/watch?v=qLoMFu14wmk&pp=ygURbWlrYSBuYXlsb3IgcHljb24%3D)
+- [Beyond PEP8](https://www.youtube.com/watch?v=wf-BqAjZb8M)
