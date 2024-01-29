@@ -9,6 +9,7 @@ Ruff can be easily integrated into your workflow this way. See [here](https://do
 
 ruff [can be configured](https://docs.astral.sh/ruff/configuration/) in the [`pyproject.toml`](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/).
 This file is used by many packaging tools, linters and type checkers and can be the central configuration point for your project.
+It serves to address with `setup.py` and Setuptools (see [PEP518](https://peps.python.org/pep-0518/)).
 One python packing and dependency management tool that uses `pyproject.toml` is [poetry](https://python-poetry.org/docs/).
 
 ## Type checking
