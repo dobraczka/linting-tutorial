@@ -12,7 +12,7 @@ ruff check --fix --select I example.py
 You might have noticed, that some code was added here. Using [flake-8-simplify](https://docs.astral.sh/ruff/rules/#flake8-simplify-sim) we can check what we can simplify here:
 
 ```
-ruff check --select SIM ltut/level_5/example.py
+ruff check --select SIM example.py
 ```
 
 The linting rules in `SIM` are a great way to improve your programming! 
