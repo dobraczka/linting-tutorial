@@ -30,3 +30,7 @@ git clone https://github.com/dobraczka/linting-tutorial.git
 ```
 
 When you have done this head to [`ltut/level_1/README.md`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/level_1/README.md).
+
+## Now what?
+
+If you are finished you can either to some `mypy` example (e.g. [`ltut/mypy_1`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/mypy_1/README.md)) or head over to [What's next](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/WhatsNext.md)
