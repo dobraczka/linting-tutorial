@@ -29,4 +29,4 @@ ruff check --select N,E,B,RET,F,UP,A example.py
 
 to see if all errors are fixed.
 
-You can now continue to `ltut/level_5`.
+You can now continue to [`ltut/level_5`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/level_5/README.md).

@@ -86,4 +86,4 @@ If you fixed the error(s) save the file and run
 ruff check --select F,E,N example.py
 ```
 again. Now there should be no errors. Congratulations! You finished the first level!
-You can now move on to `ltut/level_2`.
+You can now move on to [`ltut/level_2`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/level_2/README.md).

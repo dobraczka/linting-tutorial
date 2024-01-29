@@ -29,4 +29,4 @@ You should start by cloning this repository (or downloading it as .zip and unpac
 git clone https://github.com/dobraczka/linting-tutorial.git
 ```
 
-When you have done this head to `ltut/level_1/README.md`.
+When you have done this head to [`ltut/level_1/README.md`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/level_1/README.md).

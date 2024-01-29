@@ -10,4 +10,4 @@ ruff check --select PL example.py
 There are different ways to address the raised issues here.
 One possible way is shown in `ltut/level_6_solution/example.py`.
 
-If you are done, check out [this outlook](https://github.com/dobraczka/linting-tutorial/blob/main/WhatsNext.md)
+If you are done, check out [this outlook](https://github.com/dobraczka/linting-tutorial/blob/main/WhatsNext.md) or continue with the static typing intro in [`ltut/mypy_1`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/mypy_1)

@@ -29,4 +29,4 @@ We want to return a `str` type and not `None`.
   
 </details>
 
-When you addressed these issues (run the command again to see if everything was resolved) you can continue to `ltut/level_4`.
+When you addressed these issues (run the command again to see if everything was resolved) you can continue to [`ltut/level_4`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/level_4/README.md).

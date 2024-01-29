@@ -8,4 +8,4 @@ Run the following command to find the bugs:
 ruff check --select B example.py
 ```
 
-When you addressed these issues (run the command again to see if everything was resolved) you can continue to `ltut/level_3`.
+When you addressed these issues (run the command again to see if everything was resolved) you can continue to [`ltut/level_3`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/level_3/README.md).

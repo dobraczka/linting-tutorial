@@ -64,3 +64,25 @@ def check_subsequent(session):
             rules,
             os.path.join("ltut", lev_plus_string, "example.py"),
         )
+
+@session
+def check_mypy(session):
+    args = session.posargs or ["mypy_1"]
+    for arg in args:
+        if arg.startswith("mypy"):
+            level = arg
+    session.install(".")
+    file_to_check = f"ltut/{level}/example.py"
+    session.run("ruff", "check", "--select", "ANN", file_to_check)
+    session.run("mypy", file_to_check)
+
+@session
+def check_mypy_solution(session):
+    args = session.posargs or ["mypy_1"]
+    for arg in args:
+        if arg.startswith("mypy"):
+            level = arg
+    session.install(".")
+    file_to_check = f"ltut/{level}/solution.py"
+    session.run("ruff", "check", "--select", "ANN", file_to_check)
+    session.run("mypy", file_to_check)

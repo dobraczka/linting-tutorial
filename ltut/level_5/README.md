@@ -17,4 +17,4 @@ ruff check --select SIM ltut/level_5/example.py
 
 The linting rules in `SIM` are a great way to improve your programming! 
 
-When you are done, you can head over to `ltut/level_6`.
+When you are done, you can head over to [`ltut/level_6`](https://github.com/dobraczka/linting-tutorial/blob/main/ltut/level_6/README.md).
