@@ -1,4 +1,4 @@
-# Sometimes you get nothin in return
+# Sometimes you get nothing in return
 
 Check the code with:
 
