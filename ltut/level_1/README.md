@@ -17,7 +17,7 @@ Let's run the first command:
 ruff check --select F,E example.py
 ```
 
-This will run the ruff linter with the [Pyflakes](https://docs.astral.sh/ruff/rules/#pyflakes-f) and [Pycodestyle](https://docs.astral.sh/ruff/rules/#pycodestyle-e-w) rules, which will check your code against some rules of the [Python Style Guide](https://peps.python.org/pep-0008/) (a stylized guide for PEP 8 can be found [here](https://peps.python.org/pep-0008/)).
+This will run the ruff linter with the [Pyflakes](https://docs.astral.sh/ruff/rules/#pyflakes-f) and [Pycodestyle](https://docs.astral.sh/ruff/rules/#pycodestyle-e-w) rules, which will check your code against some rules of the [Python Style Guide](https://peps.python.org/pep-0008/) (a stylized guide for PEP 8 can be found [here](https://pep8.org/)).
 
 After running the command you will see, that the session failed.
 This is intentional.
